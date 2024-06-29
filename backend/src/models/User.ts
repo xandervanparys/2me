@@ -1,71 +1,24 @@
-import moment from 'moment';
+// src/models/User.ts
 
+import mongoose, { Schema, Document } from 'mongoose';
+import { Letter } from './Letter';
 
-// **** Variables **** //
-
-const INVALID_CONSTRUCTOR_PARAM = 'nameOrObj arg must a string or an object ' + 
-  'with the appropriate user keys.';
-
-
-// **** Types **** //
-
-export interface IUser {
-  id: number;
-  name: string;
+export interface User extends Document {
+  oauthId: string;
+  oauthProvider: string;
   email: string;
-  created: Date;
+  username: string;
+  letters: mongoose.Types.Array<Letter['_id']>;
 }
 
+const userSchema = new Schema<User>({
+  oauthId: { type: String, required: true },
+  oauthProvider: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  username: { type: String, required: true, unique: true },
+  letters: [{ type: Schema.Types.ObjectId, ref: 'Letter' }]
+});
 
-// **** Functions **** //
+const UserModel = mongoose.model<User>('User', userSchema);
 
-/**
- * Create new User.
- */
-function new_(
-  name?: string,
-  email?: string,
-  created?: Date,
-  id?: number, // id last cause usually set by db
-): IUser {
-  return {
-    id: (id ?? -1),
-    name: (name ?? ''),
-    email: (email ?? ''),
-    created: (created ? new Date(created) : new Date()),
-  };
-}
-
-/**
- * Get user instance from object.
- */
-function from(param: object): IUser {
-  if (!isUser(param)) {
-    throw new Error(INVALID_CONSTRUCTOR_PARAM);
-  }
-  const p = param as IUser;
-  return new_(p.name, p.email, p.created, p.id);
-}
-
-/**
- * See if the param meets criteria to be a user.
- */
-function isUser(arg: unknown): boolean {
-  return (
-    !!arg &&
-    typeof arg === 'object' &&
-    'id' in arg && typeof arg.id === 'number' && 
-    'email' in arg && typeof arg.email === 'string' && 
-    'name' in arg && typeof arg.name === 'string' &&
-    'created' in arg && moment(arg.created as string | Date).isValid()
-  );
-}
-
-
-// **** Export default **** //
-
-export default {
-  new: new_,
-  from,
-  isUser,
-} as const;
+export default UserModel;

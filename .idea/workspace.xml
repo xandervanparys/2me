@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f3f1b0b-3f7e-48f2-8dca-2c1e71e24413" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="9f3f1b0b-3f7e-48f2-8dca-2c1e71e24413" name="Changes" comment="added backend">
+      <change afterPath="$PROJECT_DIR$/backend/src/DAOs/letterDAO.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/DAOs/userDAO.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/models/Letter.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/models/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/routes/UserRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/routes/UserRoutes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/services/UserService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/services/UserService.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,9 +74,22 @@
       <updated>1719687405510</updated>
       <workItem from="1719687408721" duration="578000" />
     </task>
+    <task id="LOCAL-00001" summary="added backend">
+      <option name="closed" value="true" />
+      <created>1719693749589</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719693749589</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="added backend" />
   </component>
 </project>
