@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f3f1b0b-3f7e-48f2-8dca-2c1e71e24413" name="Changes" comment="fixed database scripts">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/4ba460e7-bdc8-4ad0-bab2-ba0fccbc2350/storage_v2/_src_/schema/test.kkQ2AA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/routes/letterRoutes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/routes/userRoutes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/repos/MockOrm.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/repos/UserRepo.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/repos/database.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/routes/UserRoutes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/routes/index.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +55,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.scopes",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.1.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   },
@@ -84,7 +80,8 @@
       <updated>1719687405510</updated>
       <workItem from="1719687408721" duration="578000" />
       <workItem from="1719761321357" duration="3068000" />
-      <workItem from="1719778221749" duration="2480000" />
+      <workItem from="1719778221749" duration="3519000" />
+      <workItem from="1719781897251" duration="2390000" />
     </task>
     <task id="LOCAL-00001" summary="added backend">
       <option name="closed" value="true" />
@@ -110,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719780475899</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fixed database scripts">
+      <option name="closed" value="true" />
+      <created>1719780893535</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719780893535</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

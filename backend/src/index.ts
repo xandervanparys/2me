@@ -2,10 +2,14 @@
 import express, { Request, Response } from 'express';
 import mongoose from 'mongoose';
 import { ConnectOptions, connect } from "mongoose"
+import userRoutes from "./routes/userRoutes";
+import letterRoutes from "./routes/letterRoutes";
+
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 1069;
+app.use(express.json());
 const mongoURI = process.env.DATABASE || "empty string";
 
 // Connect to MongoDB
@@ -21,7 +25,11 @@ app.get('/', (req: Request, res: Response) => {
     res.send('Hello World!');
 });
 
+app.use("/api/users", userRoutes);
+app.use("/api/letters", letterRoutes);
+
 // Start server
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
 });
+
