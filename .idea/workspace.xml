@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f3f1b0b-3f7e-48f2-8dca-2c1e71e24413" name="Changes" comment="fixed database scripts">
-      <change afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/routes/letterRoutes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/routes/userRoutes.ts" afterDir="false" />
+    <list default="true" id="9f3f1b0b-3f7e-48f2-8dca-2c1e71e24413" name="Changes" comment="basic backend works">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +48,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "javascript.nodejs.core.library.configured.version": "18.16.0",
     "javascript.nodejs.core.library.typings.version": "18.16.0",
+    "last_opened_file_path": "C:/Users/xander vanparys/Desktop/2me/backend/package.json",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,6 +69,43 @@
       <recent name="C:\Users\xander vanparys\Desktop\2me\backend" />
     </key>
   </component>
+  <component name="RunManager" selected="npm.frontend - dev">
+    <configuration default="true" type="ReactNative" factoryName="React Native">
+      <node-interpreter value="project" />
+      <react-native value="" />
+      <platform value="ANDROID" />
+      <envs />
+      <only-packager />
+      <browser value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <method v="2">
+        <option name="ReactNativePackager" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="backend - dev" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/backend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="frontend - dev" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.frontend - dev" />
+      <item itemvalue="npm.backend - dev" />
+    </list>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -81,7 +117,7 @@
       <workItem from="1719687408721" duration="578000" />
       <workItem from="1719761321357" duration="3068000" />
       <workItem from="1719778221749" duration="3519000" />
-      <workItem from="1719781897251" duration="2390000" />
+      <workItem from="1719781897251" duration="5711000" />
     </task>
     <task id="LOCAL-00001" summary="added backend">
       <option name="closed" value="true" />
@@ -115,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719780893535</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="basic backend works">
+      <option name="closed" value="true" />
+      <created>1719784406841</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719784406841</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +180,7 @@
     <MESSAGE value="added backend" />
     <MESSAGE value="dao test works" />
     <MESSAGE value="fixed database scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed database scripts" />
+    <MESSAGE value="basic backend works" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic backend works" />
   </component>
 </project>

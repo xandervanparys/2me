@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, {useState} from 'react';
+import './outputApp.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [letters, setLetters] = useState([]);
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    const fetchLetters = async () => {
+        try {
+            const response = await fetch('http://localhost:3000/api/letters');
+            if (!response.ok) {
+                throw new Error('Failed to fetch data');
+            }
+            const data = await response.json();
+            setLetters(data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    return (
+        <>
+            <button onClick={fetchLetters} className="btn w-64 rounded-full btn-primary">
+                Fetch Letters
+            </button>
+            <div className="accordion my-8">
+                {letters.map((letter, index) => (
+                    <div key={index} className="collapse collapse-arrow bg-base-200 mb-4">
+                        <input type="radio" name="my-accordion-1" defaultChecked={index === 0}/>
+                        <div className="collapse-title text-xl font-medium">{letter.title}</div>
+                        <div className="collapse-content">
+                            <p>{letter.content}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </>
+    );
 }
 
-export default App
+export default App;
