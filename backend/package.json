@@ -9,7 +9,8 @@
     "dev": "nodemon",
     "test": "nodemon --config ./spec/nodemon.json",
     "test:no-reloading": "npx ts-node --files -r tsconfig-paths/register ./spec",
-    "add": "npx ts-node test.ts"
+    "smalltest": "npx ts-node test.ts",
+    "cleardb": "npx ts-node emptyDB.ts"
   },
   "nodemonConfig": {
     "watch": [

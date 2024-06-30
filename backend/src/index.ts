@@ -3,10 +3,13 @@
 import express, { Request, Response } from 'express';
 import mongoose from 'mongoose';
 import { ConnectOptions, connect } from "mongoose"
+import * as process from "process";
+
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const mongoURI = 'mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.1.1';
+const mongoURI = process.env.DATABASE || "";
 
 // Connect to MongoDB
 mongoose.connect(mongoURI
