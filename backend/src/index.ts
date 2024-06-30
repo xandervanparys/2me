@@ -1,15 +1,12 @@
 // src/app.ts
-
 import express, { Request, Response } from 'express';
 import mongoose from 'mongoose';
 import { ConnectOptions, connect } from "mongoose"
-import * as process from "process";
-
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const mongoURI = process.env.DATABASE || "";
+const mongoURI = process.env.DATABASE || "empty string";
 
 // Connect to MongoDB
 mongoose.connect(mongoURI
