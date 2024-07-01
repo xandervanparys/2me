@@ -1,5 +1,10 @@
 ## About
 
+### Docker Setup
+1. docker run --rm -d --name my-mongo -p 27017:27017 mongo mongod --replSet myReplicaSet
+2. docker exec my-mongo mongosh --eval "rs.initiate();"
+
+## Project
 This project was created with [express-generator-typescript](https://github.com/seanpmaxwell/express-generator-typescript).
 
 
