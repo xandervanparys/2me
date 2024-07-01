@@ -12,6 +12,10 @@ export class UserDAO {
         return await UserModel.findById(id).exec();
     }
 
+    async findOne(query: object): Promise<User | null> {
+        return await UserModel.findOne(query).exec();
+    }
+
     async findAll(): Promise<User[]> {
         return await UserModel.find().exec();
     }

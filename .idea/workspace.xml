@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f3f1b0b-3f7e-48f2-8dca-2c1e71e24413" name="Changes" comment="fetching letters from frontend works and added tailwind with daisyui" />
+    <list default="true" id="9f3f1b0b-3f7e-48f2-8dca-2c1e71e24413" name="Changes" comment="add docker setup to readme">
+      <change afterPath="$PROJECT_DIR$/backend/src/oAuth/googleOAuth.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/routes/oAuthRoutes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/LettersPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/LoginPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/ProtectedRoute.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/spec/tests/users.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/spec/tests/users.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/spec/types/misc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/spec/types/misc.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/DAOs/userDAO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/DAOs/userDAO.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,6 +130,7 @@
       <workItem from="1719761321357" duration="3068000" />
       <workItem from="1719778221749" duration="3519000" />
       <workItem from="1719781897251" duration="5876000" />
+      <workItem from="1719847921257" duration="8235000" />
     </task>
     <task id="LOCAL-00001" summary="added backend">
       <option name="closed" value="true" />
@@ -170,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719787775107</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add docker setup to readme">
+      <option name="closed" value="true" />
+      <created>1719848204988</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719848204988</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +219,7 @@
     <MESSAGE value="fixed database scripts" />
     <MESSAGE value="basic backend works" />
     <MESSAGE value="fetching letters from frontend works and added tailwind with daisyui" />
-    <option name="LAST_COMMIT_MESSAGE" value="fetching letters from frontend works and added tailwind with daisyui" />
+    <MESSAGE value="add docker setup to readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="add docker setup to readme" />
   </component>
 </project>
