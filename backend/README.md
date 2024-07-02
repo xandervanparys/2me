@@ -27,7 +27,7 @@ Run a single unit-test.
 Run all unit-tests without hot-reloading.
 
 ### `npm run lint`
-
+w
 Check for linting errors.
 
 ### `npm run build`

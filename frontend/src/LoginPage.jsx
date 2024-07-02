@@ -1,13 +1,23 @@
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 const LoginPage = () => {
+    const navigate = useNavigate();
+
     useEffect(() => {
-        fetch('http://localhost:3000/current_user')
-            .then(response => response.json())
-            .then(data => {
-                if (data) {
-                    window.location.href = '/letters';
-                }
-            });
-    }, []);
+        const checkAuth = () => {
+            const params = new URLSearchParams(window.location.search);
+            const authToken = params.get('token');
+
+            if (authToken) {
+                console.log('Storing token:', authToken); // Debug log
+                localStorage.setItem('authToken', authToken);
+                navigate('/home');
+            }
+        };
+
+        checkAuth();
+    }, [navigate]);
 
     const handleLogin = () => {
         window.location.href = 'http://localhost:3000/auth/google';

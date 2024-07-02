@@ -1,6 +1,6 @@
-
-const LettersPage = () => {
+ const LettersPage = () => {
     const [letters, setLetters] = useState([]);
+    const [user, setUser] = useState(null);
 
     const fetchLetters = async () => {
         try {
@@ -18,15 +18,28 @@ const LettersPage = () => {
     };
 
     useEffect(() => {
-        fetchLetters();
+        fetch('http://localhost:3000/current_user')
+            .then(response => response.json())
+            .then(data => {
+                setUser(data);
+                if (!data) {
+                    window.location.href = '/login';
+                } else {
+                    fetchLetters();
+                }
+            });
     }, []);
+
+    if (!user) {
+        return <Navigate to="/login"/>;
+    }
 
     return (
         <div>
             <h2>Letters Page</h2>
             {letters.map((letter, index) => (
                 <div key={index} className="collapse bg-base-200">
-                    <input type="radio" name="my-accordion-1" defaultChecked={index === 0} />
+                    <input type="radio" name="my-accordion-1" defaultChecked={index === 0}/>
                     <div className="collapse-title text-xl font-medium">{letter.title}</div>
                     <div className="collapse-content">
                         <p>{letter.content}</p>
@@ -34,25 +47,6 @@ const LettersPage = () => {
                 </div>
             ))}
         </div>
-
-
-    // <>
-    //     <button onClick={fetchLetters} className="btn w-64 rounded-full btn-primary">
-    //         Fetch Letters
-    //     </button>
-    //     <div className="accordion my-8">
-    //         {letters.map((letter, index) => (
-    //             <div key={index} className="collapse collapse-arrow bg-base-200 mb-4">
-    //                 <input type="radio" name="my-accordion-1" defaultChecked={index === 0}/>
-    //                 <div className="collapse-title text-xl font-medium">{letter.title}</div>
-    //                 <div className="collapse-content">
-    //                     <p>{letter.content}</p>
-    //                 </div>
-    //             </div>
-    //         ))}
-    //     </div>
-    // </>
-
     );
 };
 

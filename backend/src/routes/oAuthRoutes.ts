@@ -3,16 +3,31 @@ import passport from 'passport';
 
 const router = express.Router();
 
+const characters = "abcdefghijklmnopqrstuvwxyz123456789&é";
+
+function generateString(length: number): string {
+    let result: string = "";
+    for (let i = 0; i < length; i++) {
+        let r = Math.floor(Math.random() * characters.length);
+        result += characters.charAt(r);
+    }
+    return result;
+}
+
+
 router.get('/google',
-    passport.authenticate('google', { scope: ['profile', 'email'] })
+    passport.authenticate('google', {scope: ['profile', 'email']})
 );
 
 router.get('/google/callback',
-    passport.authenticate('google', { failureRedirect: '/login' }),
+    passport.authenticate('google', {failureRedirect: '/login'}),
     (req, res) => {
         // Successful authentication, redirect home or send response
         console.log("succesful authentication");
-        res.redirect(process.env.FRONTEND_URL_LOGGED_IN || '');
+        console.log("generating token");
+        const token: string = generateString(11);
+        console.log("token: " + token);
+        res.redirect(process.env.FRONTEND_URL_LOGGED_IN + `?token=${token}` || '');
     }
 );
 
