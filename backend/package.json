@@ -10,7 +10,9 @@
     "test": "nodemon --config ./spec/nodemon.json",
     "test:no-reloading": "npx ts-node --files -r tsconfig-paths/register ./spec",
     "smalltest": "npx ts-node test.ts",
-    "cleardb": "npx ts-node emptyDB.ts"
+    "cleardb": "npx ts-node emptyDB.ts",
+    "dockerstart": "docker run --rm -d --name my-mongo -p 27017:27017 mongo mongod --replSet myReplicaSet",
+    "dockerrun": "docker exec my-mongo mongosh --eval \"rs.initiate();\""
   },
   "nodemonConfig": {
     "watch": [
